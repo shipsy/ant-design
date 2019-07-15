@@ -76,7 +76,7 @@
     "rc-slider": "~8.6.5",
     "rc-steps": "~3.3.0",
     "rc-switch": "~1.9.0",
-    "rc-table": "~6.4.0",
+    "rc-table": "shipsy/rc-table#version-6.4.5",
     "rc-tabs": "~9.6.0",
     "rc-time-picker": "~3.6.1",
     "rc-tooltip": "~3.7.3",
@@ -223,7 +223,8 @@
     "lint-staged:ts": "tsc && node node_modules/tslint/bin/tslint",
     "lint-staged:es": "eslint ./.*.js ./webpack.config.js",
     "lint-staged:demo": "cross-env RUN_ENV=DEMO eslint --ext '.md'",
-    "prettier": "node ./scripts/prettier.js"
+    "prettier": "node ./scripts/prettier.js",
+    "prepare" : "antd-tools run dist && antd-tools run compile"
   },
   "pre-commit": [
     "lint-staged"
