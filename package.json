@@ -137,6 +137,7 @@
     "eslint-tinker": "^0.5.0",
     "fetch-jsonp": "^1.1.3",
     "glob": "^7.1.3",
+    "husky": "^3.0.0",
     "immutability-helper": "^3.0.0",
     "intersection-observer": "^0.5.0",
     "jest": "^24.0.0",
@@ -227,7 +228,8 @@
     "lint-staged:ts": "tsc && node node_modules/tslint/bin/tslint",
     "lint-staged:es": "eslint ./.*.js ./webpack.config.js",
     "lint-staged:demo": "cross-env RUN_ENV=DEMO eslint --ext '.md'",
-    "prettier": "node ./scripts/prettier.js"
+    "prettier": "node ./scripts/prettier.js",
+    "pre-push": "npm run dist && npm run compile"
   },
   "pre-commit": [
     "lint-staged"
