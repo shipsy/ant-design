@@ -253,14 +253,6 @@
       "npm run lint-staged:demo"
     ]
   },
-  "pre-push" : [
-    "pushscripts"
-  ],
-  "pushscripts": {
-    "*" : [
-      "pre-push"
-    ]
-  },
   "sideEffects": [
     "dist/*",
     "es/**/style/*",
