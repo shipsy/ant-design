@@ -228,8 +228,12 @@
     "lint-staged:ts": "tsc && node node_modules/tslint/bin/tslint",
     "lint-staged:es": "eslint ./.*.js ./webpack.config.js",
     "lint-staged:demo": "cross-env RUN_ENV=DEMO eslint --ext '.md'",
-    "prettier": "node ./scripts/prettier.js",
-    "pre-push": "npm run dist && npm run compile"
+    "prettier": "node ./scripts/prettier.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run dist && npm run compile"
+    }
   },
   "pre-commit": [
     "lint-staged"
