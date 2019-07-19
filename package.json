@@ -232,7 +232,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run dist && npm run compile"
     }
   },
   "pre-commit": [
